@@ -1,0 +1,11 @@
+name = "gradient-descent-lean"
+version = "0.1.0"
+defaultTargets = ["GradientDescent"]
+
+[[require]]
+name = "mathlib"
+from = "git"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "GradientDescent"
