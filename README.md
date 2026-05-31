@@ -1,8 +1,18 @@
 # gradient-descent-lean
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PENDING.svg)](https://doi.org/10.5281/zenodo.PENDING)
+
 Lean 4 formal proofs of gradient descent convergence for smooth convex optimisation.
 
 **18 theorems. Zero sorry statements.** Works over arbitrary real Hilbert spaces.
+
+## Why it matters
+
+Gradient descent is the engine of modern machine learning. Its convergence guarantees — smoothness implies quadratic upper bounds, convexity turns local information into global bounds, strong convexity gives geometric contraction — are treated as elementary in textbooks, but the details (differentiability hypotheses, step-size conditions, telescoping estimates) are non-trivial to state precisely.
+
+This library machine-checks those details in Lean 4. It provides a compact, importable proof spine for the O(1/k) convex rate and geometric strongly convex rate, over **arbitrary real Hilbert spaces**, not just finite-dimensional ℝⁿ. Future formal work on optimisation, machine learning, or AI safety can import these results rather than re-formalising them.
+
+At the time of writing, Mathlib contains no standalone Lean 4 library packaging the classical gradient descent convergence proof in this form. This fills that gap.
 
 ## Project structure
 
@@ -45,20 +55,57 @@ GradientDescent/
 
 ## Key technical highlights
 
-- `lsmooth_upper_bound` proved from first principles via the fundamental theorem of calculus and interval integration — not assumed as an axiom
-- All proofs use only standard axioms: `propext`, `Classical.choice`, `Quot.sound`
-- Uses Mathlib's `HasGradientAt`, `LipschitzWith`, and `InnerProductSpace` infrastructure
-- Works over **arbitrary real Hilbert spaces**, not just ℝⁿ
+- `lsmooth_upper_bound` proved from first principles via the fundamental theorem of calculus — not assumed as an axiom
+- Hilbert space generality: proofs hold over any `[NormedAddCommGroup E] [InnerProductSpace ℝ E] [CompleteSpace E]`, not just ℝⁿ
+- Standard axioms only: `propext`, `Classical.choice`, `Quot.sound` — no project-specific axioms
+- Zero `sorry`, zero `admit`
+
+## Usage
+
+Add to your `lakefile.toml`:
+
+```toml
+[[require]]
+name = "GradientDescent"
+scope = "velvetmonkey"
+rev = "main"
+```
+
+Then import what you need:
+
+```lean
+import GradientDescent.Convergence  -- O(1/k) and geometric rates
+import GradientDescent.Smooth       -- descent lemma, quadratic upper bound
+import GradientDescent.Convex       -- convexity inequalities
+import GradientDescent.Defs         -- core definitions
+```
 
 ## Dependencies
 
 - Lean 4.28.0
 - Mathlib v4.28.0
 
+## Paper
+
+A companion paper is available in this repository: [`paper.md`](paper.md) / [`paper.pdf`](paper.pdf)
+
+## Cite
+
+```bibtex
+@software{cassie2026gradientdescentlean,
+  author    = {Cassie, Ben},
+  title     = {gradient-descent-lean: Formal Proofs of Gradient Descent Convergence in Lean 4},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.PENDING},
+  url       = {https://doi.org/10.5281/zenodo.PENDING}
+}
+```
+
 ## Related work
 
 - [kuramoto-lean](https://github.com/velvetmonkey/kuramoto-lean) — Lean 4 formalisation of Kuramoto synchronisation
-- [flywheel-universe](https://zenodo.org/doi/10.5281/zenodo.20469680) — companion paper (Zenodo v2)
+- [flywheel-universe](https://zenodo.org/doi/10.5281/zenodo.20469680) — companion Zenodo paper (v2)
 
 ## Author
 
