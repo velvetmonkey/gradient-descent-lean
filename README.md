@@ -1,6 +1,6 @@
 # gradient-descent-lean
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20472996.svg)](https://doi.org/10.5281/zenodo.20472996)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20472996-blue)](https://doi.org/10.5281/zenodo.20472996)
 
 Lean 4 formal proofs of gradient descent convergence for smooth convex optimisation.
 
@@ -107,6 +107,7 @@ Zenodo preprint: [10.5281/zenodo.20472996](https://doi.org/10.5281/zenodo.204729
 ## Related work
 
 - [kuramoto-lean](https://github.com/velvetmonkey/kuramoto-lean) -- Lean 4 formalisation of Kuramoto synchronisation
+- [hopfield-lean](https://github.com/velvetmonkey/hopfield-lean) -- Lean 4 Hopfield network energy descent and attractor convergence
 - [flywheel-universe](https://zenodo.org/doi/10.5281/zenodo.20469680) -- companion Zenodo paper (v2)
 
 ## Author
