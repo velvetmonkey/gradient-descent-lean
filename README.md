@@ -110,6 +110,10 @@ Zenodo preprint: [10.5281/zenodo.20472996](https://doi.org/10.5281/zenodo.204729
 - [hopfield-lean](https://github.com/velvetmonkey/hopfield-lean) -- Lean 4 Hopfield network energy descent and attractor convergence
 - [flywheel-universe](https://zenodo.org/doi/10.5281/zenodo.20469680) -- companion Zenodo paper (v2)
 
+## Acknowledgements
+
+Proofs in this library were generated using [Aristotle](https://aristotle.harmonic.fun), an AI proof assistant for Lean 4 and Mathlib. The proof discipline -- zero sorry, every Mathlib lemma name `#check`ed before use -- was specified by the author and enforced by the Lean type checker.
+
 ## Author
 
 Ben Cassie · [@thevelvetmonke](https://x.com/thevelvetmonke)
