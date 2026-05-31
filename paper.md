@@ -23,12 +23,10 @@ At the time of writing, Mathlib contains substantial analysis, topology, normed-
 
 The project is organised into four Lean modules:
 
-| Module | Role |
-|---|---|
-| `GradientDescent/Defs.lean` | Core definitions: smoothness, strong convexity, convexity, minimisers, and the gradient descent sequence |
-| `GradientDescent/Smooth.lean` | Smoothness consequences: quadratic upper bound and descent lemma |
-| `GradientDescent/Convex.lean` | Convex and strongly convex first-order inequalities |
-| `GradientDescent/Convergence.lean` | One-step estimates, telescoping bounds, $O(1/k)$ convergence, and strongly convex geometric convergence |
+- `GradientDescent/Defs.lean` defines smoothness, strong convexity, convexity, minimisers, and the gradient descent sequence.
+- `GradientDescent/Smooth.lean` proves smoothness consequences, including the quadratic upper bound and descent lemma.
+- `GradientDescent/Convex.lean` proves convex and strongly convex first-order inequalities.
+- `GradientDescent/Convergence.lean` proves one-step estimates, telescoping bounds, the $O(1/k)$ rate, and strongly convex geometric convergence.
 
 The project depends on:
 
