@@ -53,31 +53,27 @@ The source audit found 18 theorem declarations. The gradient descent sequence `g
 
 ### Layer 1 - Foundations
 
-| # | Theorem | Informal statement |
-|---:|---|---|
-| 1 | `isLSmooth_def` | Characterises `L`-smoothness as existence of gradients everywhere plus an `L`-Lipschitz gradient map. |
-| 2 | `lsmooth_upper_bound` | Proves the standard quadratic upper bound for smooth functions. |
-| 3 | `descent_lemma` | Shows that a gradient step decreases the function value under the usual step-size condition. |
-| 4 | `stronglyConvex_def` | Unfolds the definition of strong convexity used by the library. |
-| 5 | `isConvex_lower_bound` | Gives the first-order lower bound for convex functions. |
-| 6 | `isConvex_minimiser_gradient_zero` | Shows that the gradient vanishes at a minimiser. |
-| 7 | `stronglyConvex_func_gap_lower` | Lower-bounds the function gap by a quadratic distance term under strong convexity. |
-| 8 | `stronglyConvex_inner_gradient_bound` | Gives the inner-product lower bound used in the strongly convex contraction proof. |
+1. `isLSmooth_def` — Characterises `L`-smoothness as existence of gradients everywhere plus an `L`-Lipschitz gradient map.
+2. `lsmooth_upper_bound` — Proves the standard quadratic upper bound for smooth functions.
+3. `descent_lemma` — Shows that a gradient step decreases the function value under the usual step-size condition.
+4. `stronglyConvex_def` — Unfolds the definition of strong convexity used by the library.
+5. `isConvex_lower_bound` — Gives the first-order lower bound for convex functions.
+6. `isConvex_minimiser_gradient_zero` — Shows that the gradient vanishes at a minimiser.
+7. `stronglyConvex_func_gap_lower` — Lower-bounds the function gap by a quadratic distance term under strong convexity.
+8. `stronglyConvex_inner_gradient_bound` — Gives the inner-product lower bound used in the strongly convex contraction proof.
 
 ### Layer 2 - Gradient Descent Sequence and Convergence
 
-| # | Theorem | Informal statement |
-|---:|---|---|
-| 9 | `gdSeq_zero` | The gradient descent sequence starts at the initial point. |
-| 10 | `gdSeq_succ` | The successor step is `x_n+1 = x_n - α ∇f(x_n)`. |
-| 11 | `norm_sq_gd_expand` | Algebraic expansion of the squared norm after subtracting a scaled direction. |
-| 12 | `gd_step_distance_sq` | Distance-to-solution identity after one gradient step. |
-| 13 | `gd_convex_step_bound` | One-step convex-case bound relating progress to distance decrease. |
-| 14 | `gd_descent_nonincreasing` | Gradient descent produces non-increasing objective values. |
-| 15 | `gd_convex_telescope` | Telescoping estimate for the convex convergence proof. |
-| 16 | `gd_convex_convergence` | Proves the $O(1/k)$ convex convergence rate. |
-| 17 | `gd_strongly_convex_step` | Proves the one-step contraction estimate in the strongly convex case. |
-| 18 | `gd_strongly_convex_convergence` | Proves the geometric strongly convex convergence rate. |
+9. `gdSeq_zero` — The gradient descent sequence starts at the initial point.
+10. `gdSeq_succ` — The successor step is `x_n+1 = x_n - α ∇f(x_n)`.
+11. `norm_sq_gd_expand` — Algebraic expansion of the squared norm after subtracting a scaled direction.
+12. `gd_step_distance_sq` — Distance-to-solution identity after one gradient step.
+13. `gd_convex_step_bound` — One-step convex-case bound relating progress to distance decrease.
+14. `gd_descent_nonincreasing` — Gradient descent produces non-increasing objective values.
+15. `gd_convex_telescope` — Telescoping estimate for the convex convergence proof.
+16. `gd_convex_convergence` — Proves the $O(1/k)$ convex convergence rate.
+17. `gd_strongly_convex_step` — Proves the one-step contraction estimate in the strongly convex case.
+18. `gd_strongly_convex_convergence` — Proves the geometric strongly convex convergence rate.
 
 The two headline convergence results are:
 
