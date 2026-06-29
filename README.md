@@ -4,7 +4,7 @@
 
 Lean 4 formal proofs of gradient descent convergence for smooth convex optimisation.
 
-**18 theorems. Zero sorry statements.** Works over arbitrary real Hilbert spaces.
+**17 theorems. Zero sorry statements.** Works over arbitrary real Hilbert spaces.
 
 ## Why it matters
 
