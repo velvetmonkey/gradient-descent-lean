@@ -1,6 +1,5 @@
 # gradient-descent-lean
 
-[![thread](https://img.shields.io/badge/%F0%9F%A7%B5-how%20it%20works-1DA1F2)](https://x.com/thevelvetmonke)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20472996-blue)](https://doi.org/10.5281/zenodo.20472996)
 
 Lean 4 formal proofs of gradient descent convergence for smooth convex optimisation.
