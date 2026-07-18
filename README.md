@@ -1,12 +1,21 @@
 # gradient-descent-lean
 
+[![thread](https://img.shields.io/badge/%F0%9F%A7%B5-how%20it%20works-1DA1F2)](https://x.com/thevelvetmonke)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20472996-blue)](https://doi.org/10.5281/zenodo.20472996)
 
 Lean 4 formal proofs of gradient descent convergence for smooth convex optimisation.
 
 **17 theorems. Zero sorry statements.** Works over arbitrary real Hilbert spaces.
 
-## Why it matters
+## What this is, and why it matters
+
+This library formalizes classical gradient-descent convergence over arbitrary real Hilbert spaces. Its headline theorem, `gd_strongly_convex_convergence`, proves the geometric squared-distance bound `(1-alpha*mu)^k * ||x0-xstar||^2` for a positive step size at most `1/L`.
+
+The proof spine is machine checked from calculus through iteration. The library derives the quadratic upper bound for smooth functions using the fundamental theorem of calculus, obtains descent for a gradient step, combines descent with strong convexity to prove one-step contraction, and then iterates it. It also proves the standard O(1/k) function-value rate in the convex case.
+
+The results assume exact gradients, global smoothness and convexity conditions, and a supplied global minimizer. The strongly convex theorem also takes the minimizer's zero-gradient fact as a hypothesis. It does not model numerical error, automatic differentiation, stochastic gradients, or a concrete training implementation.
+
+## Background and motivation
 
 Gradient descent is the engine of modern machine learning. Its convergence guarantees -- smoothness implies quadratic upper bounds, convexity turns local information into global bounds, strong convexity gives geometric contraction -- are treated as elementary in textbooks, but the details (differentiability hypotheses, step-size conditions, telescoping estimates) are non-trivial to state precisely.
 
